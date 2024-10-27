@@ -17,7 +17,7 @@
         "most_recent": true
       },
       "instance_type": "t2.micro",
-      "ssh_username": "alexh",
+      "ssh_username": "admin",
       "ami_name": "alexh-packer-ami-{{timestamp}}"
     }
   ],
@@ -31,6 +31,12 @@
       "type": "shell",
       "inline": [
         "cat ~/.ssh/packer-deb-key.pub >> ~/.ssh/authorized_keys"
+      ]
+    },
+    {
+      "type": "shell",
+      "inline": [
+        "sudo su -"
       ]
     },
     {
