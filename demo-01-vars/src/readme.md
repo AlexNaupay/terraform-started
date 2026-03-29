@@ -7,10 +7,14 @@
 - **default.auto.tfvars** A diferencia del anterior los archivos con extensión `auto.tfvars` si los interpreta terraform automaticamente.
 
 ## Run
-`terraform plan -var-file dev.tfvars`
+```bash
+# Use variables from command line
+terraform plan -var="aws_region=us-east-1"
 
-`terraform apply -var-file dev.tfvars`
-
-`terraform destroy -var-file dev.tfvars`
+# Use variables from file
+terraform plan -var-file dev.tfvars
+terraform apply -var-file dev.tfvars
+terraform destroy -var-file dev.tfvars
+```
 
 https://developer.hashicorp.com/terraform/language/values/variables#variable-definition-precedence
