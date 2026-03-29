@@ -13,3 +13,4 @@
 
 `terraform destroy -var-file dev.tfvars`
 
+https://developer.hashicorp.com/terraform/language/values/variables#variable-definition-precedence
